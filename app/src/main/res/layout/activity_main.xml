@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background ="#2d4057"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tvBmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/bmi_calculator"
+        android:textColor="@color/white"
+        android:textSize="35sp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:layout_below="@+id/tvBmi"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:gravity="center">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/lyGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/cdBoy"
+            android:layout_width="190dp"
+            android:layout_height="200dp"
+            android:elevation="9dp"
+            android:background="@drawable/card_bg2"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:id="@+id/ivBoy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_boy">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cdGirl"
+            android:layout_width="190dp"
+            android:layout_height="200dp"
+            android:elevation="9dp"
+            android:background="@drawable/card_bg2"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:id="@+id/ivGirl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_girl">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/CdHeight"
+        android:layout_width="400dp"
+        android:layout_height="160dp"
+        android:background="@drawable/card_bg2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/lyGender"
+        android:layout_marginTop="10dp"
+        android:elevation="9dp"
+        app:cardCornerRadius="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Height(cm)"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/white"
+            android:gravity="center">
+        </TextView>
+
+
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="44dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="150dp"
+            android:hint="00"
+            android:backgroundTint="@color/trasparent"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textColorHint="#E9E4E4"
+            >
+        </EditText>
+
+
+       <com.google.android.material.slider.Slider
+            android:id="@+id/sbHeight"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="106dp"
+            android:layout_marginEnd="10dp"
+            android:progressTint="#DEE4DF"
+            app:tickColor="@color/white"
+            app:backgroundTint="@color/white"
+            android:valueFrom="50"
+            android:valueTo="250"
+            app:labelBehavior="gone">
+        </com.google.android.material.slider.Slider>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cdWeight"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/card_bg2"
+        android:layout_below="@+id/CdHeight"
+        android:layout_marginTop="13dp"
+        android:elevation="9dp"
+        app:cardCornerRadius="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight(kg)"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/white"
+            android:gravity="center">
+        </TextView>
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="150dp"
+            android:hint="00"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:backgroundTint="@color/trasparent"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textColorHint="#EAE5E5"
+            >
+        </EditText>
+
+
+        <Button
+            android:id="@+id/btnDec"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="63dp"
+            app:backgroundTint="@color/white"
+            android:background="@drawable/baseline_horizontal_rule_24">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnInc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="244dp"
+            android:layout_marginTop="63dp"
+            android:background="@drawable/baseline_add_24"
+            app:backgroundTint="@color/white"
+            android:textColor="#2EA477"
+            android:textSize="34sp">
+
+        </Button>
+
+    </RelativeLayout>
+
+    <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+        android:id="@+id/btnCalculate"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_bg"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:textStyle="bold"
+        app:spinning_bar_width="4dp"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"/>
+
+
+
+</RelativeLayout>
+
+
